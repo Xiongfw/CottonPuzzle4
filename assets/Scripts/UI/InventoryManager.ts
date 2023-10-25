@@ -1,4 +1,4 @@
-import { _decorator, Button, Node, Label, Prefab, instantiate } from 'cc';
+import { _decorator, Button, Node, Label, Prefab, instantiate, debug } from 'cc';
 import { RenderManager } from '../Base/RenderManager';
 import { DataManager } from '../Runtime/DataManager';
 import { ItemStatusEnum, ItemTypeEnum } from '../Enum';
@@ -32,6 +32,8 @@ export class InventoryManager extends RenderManager {
       this.node.active = false;
       return;
     }
+    // TODO removeAllChildren 方法不会出发节点的 onDestroy 回调
+    // destroyAllChildren 才会
     this.placeholder.removeAllChildren();
     this.node.active = true;
     if (DataManager.instance.curItemType) {
@@ -40,7 +42,8 @@ export class InventoryManager extends RenderManager {
     } else {
       const type = inventoryItems[0].type;
       DataManager.instance.curItemType = type;
-      this.generateItem(type);
+      // TODO 去掉注释就会重复生成 Item
+      // this.generateItem(type);
     }
     // 手图标显示
     this.hand.active = DataManager.instance.curItemType && DataManager.instance.isSelect;

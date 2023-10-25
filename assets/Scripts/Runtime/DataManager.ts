@@ -15,7 +15,7 @@ export class DataManager extends Singleton {
   private _curItemType?: ItemTypeEnum;
   private _items: Array<IItem> = [
     { type: ItemTypeEnum.Key, status: ItemStatusEnum.Scene },
-    { type: ItemTypeEnum.Mail, status: ItemStatusEnum.Scene },
+    { type: ItemTypeEnum.Mail, status: ItemStatusEnum.Inventory },
   ];
 
   get isSelect() {

@@ -1,9 +1,16 @@
 import { _decorator, Component, director, Event, Node } from 'cc';
-import { SceneEnum } from '../Enum/index';
+import { ItemStatusEnum, ItemTypeEnum, SceneEnum } from '../Enum/index';
+import { RenderManager } from '../Base/RenderManager';
+import { DataManager } from '../Runtime/DataManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('SceneManager')
-export class SceneManager extends Component {
+export class SceneManager extends RenderManager {
+  @property(Node)
+  items: Node = null;
+
+  render(): void {}
+
   changeScene(e: Event, scene: SceneEnum) {
     director.loadScene(scene);
   }
