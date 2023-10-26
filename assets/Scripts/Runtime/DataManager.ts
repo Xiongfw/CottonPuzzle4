@@ -30,6 +30,7 @@ export class DataManager extends Singleton {
   ];
   private _triggerItems: Array<TriggerItem> = [
     { type: TriggerTypeEnum.Mailbox, status: TriggerStatusEnum.Pending },
+    { type: TriggerTypeEnum.Grandmo, status: TriggerStatusEnum.Pending },
   ];
 
   get triggerItems() {
