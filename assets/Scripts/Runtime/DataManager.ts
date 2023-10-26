@@ -1,10 +1,21 @@
-import { EventEnum, ItemStatusEnum, ItemTypeEnum } from '../Enum';
+import {
+  EventEnum,
+  ItemStatusEnum,
+  ItemTypeEnum,
+  TriggerStatusEnum,
+  TriggerTypeEnum,
+} from '../Enum';
 import { Singleton } from '../Base/Singleton';
 import { EventManager } from './EventManager';
 
 interface IItem {
   type: ItemTypeEnum;
   status: ItemStatusEnum;
+}
+
+interface TriggerItem {
+  type: TriggerTypeEnum;
+  status: TriggerStatusEnum;
 }
 
 export class DataManager extends Singleton {
@@ -15,8 +26,20 @@ export class DataManager extends Singleton {
   private _curItemType?: ItemTypeEnum;
   private _items: Array<IItem> = [
     { type: ItemTypeEnum.Key, status: ItemStatusEnum.Scene },
-    { type: ItemTypeEnum.Mail, status: ItemStatusEnum.Inventory },
+    { type: ItemTypeEnum.Mail, status: ItemStatusEnum.Disable },
   ];
+  private _triggerItems: Array<TriggerItem> = [
+    { type: TriggerTypeEnum.Mailbox, status: TriggerStatusEnum.Pending },
+  ];
+
+  get triggerItems() {
+    return this._triggerItems;
+  }
+
+  set triggerItems(value) {
+    this._triggerItems = value;
+    this.render();
+  }
 
   get isSelect() {
     return this._isSelect;

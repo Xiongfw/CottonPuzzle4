@@ -13,7 +13,7 @@ export class H2SceneManager extends SceneManager {
 
   render(): void {
     super.render();
-    this.items.removeAllChildren();
+    this.items.destroyAllChildren();
     
     const keyItem = DataManager.instance.items.find((item) => item.type === ItemTypeEnum.Key);
     if (keyItem && keyItem.status === ItemStatusEnum.Scene) {

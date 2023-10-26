@@ -19,6 +19,11 @@ export class ItemManager extends RenderManager {
     this.node.on(Node.EventType.TOUCH_END, this.onTouchEnd, this);
   }
 
+  onDestroy(): void {
+    super.onDestroy();
+    this.node.off(Node.EventType.TOUCH_END, this.onTouchEnd);
+  }
+
   render() {
     const item = DataManager.instance.items.find((item) => item.type === this.type);
     const sprite = this.getComponent(Sprite);

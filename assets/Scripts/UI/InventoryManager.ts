@@ -34,7 +34,7 @@ export class InventoryManager extends RenderManager {
     }
     // TODO removeAllChildren 方法不会出发节点的 onDestroy 回调
     // destroyAllChildren 才会
-    this.placeholder.removeAllChildren();
+    this.placeholder.destroyAllChildren();
     this.node.active = true;
     if (DataManager.instance.curItemType) {
       // TODO 是否要判断 Item 是否 为 Inventory 状态？
