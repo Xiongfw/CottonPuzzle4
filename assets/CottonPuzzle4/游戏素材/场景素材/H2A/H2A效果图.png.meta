@@ -2,7 +2,7 @@
   "ver": "1.0.26",
   "importer": "image",
   "imported": true,
-  "uuid": "4428859f-80a1-4c1d-a38e-078ecb75aeee",
+  "uuid": "30d0420e-304b-49b9-879f-dd9123503a61",
   "files": [
     ".json",
     ".png"
@@ -10,20 +10,20 @@
   "subMetas": {
     "6c48a": {
       "importer": "texture",
-      "uuid": "4428859f-80a1-4c1d-a38e-078ecb75aeee@6c48a",
+      "uuid": "30d0420e-304b-49b9-879f-dd9123503a61@6c48a",
       "displayName": "H2A效果图",
       "id": "6c48a",
       "name": "texture",
       "userData": {
         "wrapModeS": "clamp-to-edge",
         "wrapModeT": "clamp-to-edge",
-        "imageUuidOrDatabaseUri": "4428859f-80a1-4c1d-a38e-078ecb75aeee",
+        "imageUuidOrDatabaseUri": "30d0420e-304b-49b9-879f-dd9123503a61",
+        "isUuid": true,
+        "visible": false,
         "minfilter": "linear",
         "magfilter": "linear",
         "mipfilter": "none",
-        "anisotropy": 0,
-        "isUuid": true,
-        "visible": false
+        "anisotropy": 0
       },
       "ver": "1.0.22",
       "imported": true,
@@ -34,7 +34,7 @@
     },
     "f9941": {
       "importer": "sprite-frame",
-      "uuid": "4428859f-80a1-4c1d-a38e-078ecb75aeee@f9941",
+      "uuid": "30d0420e-304b-49b9-879f-dd9123503a61@f9941",
       "displayName": "H2A效果图",
       "id": "f9941",
       "name": "spriteFrame",
@@ -55,9 +55,6 @@
         "borderLeft": 0,
         "borderRight": 0,
         "packable": true,
-        "isUuid": true,
-        "imageUuidOrDatabaseUri": "4428859f-80a1-4c1d-a38e-078ecb75aeee@6c48a",
-        "atlasUuid": "",
         "pixelsToUnit": 100,
         "pivotX": 0.5,
         "pivotY": 0.5,
@@ -115,7 +112,10 @@
             458.5,
             0
           ]
-        }
+        },
+        "isUuid": true,
+        "imageUuidOrDatabaseUri": "30d0420e-304b-49b9-879f-dd9123503a61@6c48a",
+        "atlasUuid": ""
       },
       "ver": "1.0.12",
       "imported": true,
@@ -127,8 +127,8 @@
   },
   "userData": {
     "type": "sprite-frame",
+    "fixAlphaTransparencyArtifacts": true,
     "hasAlpha": false,
-    "redirect": "4428859f-80a1-4c1d-a38e-078ecb75aeee@f9941",
-    "fixAlphaTransparencyArtifacts": false
+    "redirect": "30d0420e-304b-49b9-879f-dd9123503a61@f9941"
   }
 }
