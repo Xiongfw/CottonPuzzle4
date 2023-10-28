@@ -23,9 +23,9 @@ export class DataManager extends Singleton {
     return super.getInstance<DataManager>();
   }
 
-  private _h2aAnwser = [0, 1, 2, 3, 4, 5, null];
-  private _h2aInitData = [1, 0, 3, 2, 5, 4, null];
-  private _h2aData = [...this._h2aInitData];
+  readonly h2aAnwser = [0, 1, 2, 3, 4, 5, null];
+  readonly h2aInitData = [1, 0, 3, 2, 5, 4, null];
+  private _h2aData = [...this.h2aInitData];
 
   private _isSelect = false;
   private _curItemType?: ItemTypeEnum;
@@ -37,11 +37,8 @@ export class DataManager extends Singleton {
   private _triggerItems: Array<TriggerItem> = [
     { type: TriggerTypeEnum.Mailbox, status: TriggerStatusEnum.Pending },
     { type: TriggerTypeEnum.Grandmo, status: TriggerStatusEnum.Pending },
+    { type: TriggerTypeEnum.Door, status: TriggerStatusEnum.Pending },
   ];
-
-  get h2aAnwser() {
-    return this._h2aAnwser;
-  }
 
   get h2aData() {
     return this._h2aData;

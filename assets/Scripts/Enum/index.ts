@@ -1,6 +1,7 @@
 export enum SceneEnum {
   H1 = 'H1',
   H2 = 'H2',
+  H2A = 'H2A',
   H3 = 'H3',
   H4 = 'H4',
 }
@@ -22,7 +23,8 @@ export enum EventEnum {
 
 export enum TriggerTypeEnum {
   Mailbox = 'Mailbox',
-  Grandmo = 'Grandmo'
+  Grandmo = 'Grandmo',
+  Door = 'Door',
 }
 
 export enum TriggerStatusEnum {

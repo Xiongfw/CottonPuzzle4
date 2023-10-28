@@ -1,7 +1,8 @@
-import { _decorator, Event, instantiate, Node, Prefab, UITransform } from 'cc';
+import { _decorator, director, Event, instantiate, Node, Prefab, Scene, UITransform } from 'cc';
 import { CircleController } from './CircleController';
 import { RenderManager } from '../Base/RenderManager';
 import { DataManager } from '../Runtime/DataManager';
+import { SceneEnum, TriggerStatusEnum, TriggerTypeEnum } from '../Enum';
 const { ccclass, property } = _decorator;
 
 @ccclass('H2AGameManager')
@@ -36,6 +37,24 @@ export class H2AGameManager extends RenderManager {
     }
   }
 
+  resetContent() {
+    DataManager.instance.h2aData = [...DataManager.instance.h2aInitData];
+  }
+
+  checkSuccess() {
+    const isSuccess = DataManager.instance.h2aAnwser.every(
+      (item, index) => DataManager.instance.h2aData[index] === item
+    );
+    if (isSuccess) {
+      const door = DataManager.instance.triggerItems.find(
+        (item) => item.type === TriggerTypeEnum.Door
+      );
+      door.status = TriggerStatusEnum.Resolve;
+      DataManager.instance.triggerItems = [...DataManager.instance.triggerItems];
+      director.loadScene(SceneEnum.H2);
+    }
+  }
+
   handleCircleTouch(e: Event, index: string) {
     const nIndex = Number(index);
     // 如果点击空的就直接 return
@@ -56,6 +75,7 @@ export class H2AGameManager extends RenderManager {
         break;
       }
     }
+    this.checkSuccess();
   }
 
   generateCirclesMap() {
