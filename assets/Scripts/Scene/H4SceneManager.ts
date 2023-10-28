@@ -1,11 +1,12 @@
 import { _decorator, Node, instantiate, Prefab } from 'cc';
 import { SceneManager } from './SceneManager';
-import { ItemTypeEnum, ItemStatusEnum } from '../Enum';
+import { ItemTypeEnum, ItemStatusEnum, SceneEnum } from '../Enum';
 import { DataManager } from '../Runtime/DataManager';
 const { ccclass, property } = _decorator;
 
 @ccclass('H4SceneManager')
 export class H4SceneManager extends SceneManager {
+  type: SceneEnum = SceneEnum.H4;
   @property(Node)
   mailPlaceholder: Node = null;
   @property(Prefab)

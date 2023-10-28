@@ -4,6 +4,7 @@ export enum SceneEnum {
   H2A = 'H2A',
   H3 = 'H3',
   H4 = 'H4',
+  Menu = 'Menu',
 }
 
 export enum ItemStatusEnum {

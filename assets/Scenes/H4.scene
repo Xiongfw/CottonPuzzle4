@@ -188,7 +188,7 @@
     "_priority": 0,
     "_fov": 45,
     "_fovAxis": 0,
-    "_orthoHeight": 602.9662921348314,
+    "_orthoHeight": 598.2608695652174,
     "_near": 0,
     "_far": 1000,
     "_color": {
@@ -712,7 +712,10 @@
       "b": 124,
       "a": 255
     },
-    "_normalSprite": null,
+    "_normalSprite": {
+      "__uuid__": "60177684-56ca-43be-8f77-97143f97994b@f9941",
+      "__expectedType__": "cc.SpriteFrame"
+    },
     "_hoverSprite": null,
     "_pressedSprite": null,
     "_disabledSprite": null,
@@ -1069,6 +1072,10 @@
     },
     "inventoryPrefab": {
       "__uuid__": "8df5fec9-d923-466b-a21d-f77b0e9a4932",
+      "__expectedType__": "cc.Prefab"
+    },
+    "menuPrefab": {
+      "__uuid__": "aed446fa-feb2-4b3e-8755-43f71dd956f6",
       "__expectedType__": "cc.Prefab"
     },
     "mailPlaceholder": {

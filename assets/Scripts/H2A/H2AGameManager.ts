@@ -51,7 +51,7 @@ export class H2AGameManager extends RenderManager {
       );
       door.status = TriggerStatusEnum.Resolve;
       DataManager.instance.triggerItems = [...DataManager.instance.triggerItems];
-      director.loadScene(SceneEnum.H2);
+      DataManager.instance.curScene = SceneEnum.H2;
     }
   }
 

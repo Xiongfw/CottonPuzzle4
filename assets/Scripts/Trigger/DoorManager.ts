@@ -16,9 +16,9 @@ export class DoorManager extends TriggerManager {
   handleTrigger(): void {
     const status = DataManager.instance.triggerItems.find((i) => i.type === this.type)?.status;
     if (status === TriggerStatusEnum.Resolve) {
-      director.loadScene(SceneEnum.H3);
+      DataManager.instance.curScene = SceneEnum.H3;
     } else {
-      director.loadScene(SceneEnum.H2A);
+      DataManager.instance.curScene = SceneEnum.H2A;
     }
   }
 }
